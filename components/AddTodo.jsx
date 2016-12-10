@@ -1,14 +1,15 @@
 import React, { Component, PropTypes } from 'react'
+import { Button } from 'react-bootstrap';
 
 export default class AddTodo extends Component {
     render() {
         return (
             <div>
-                <input type='text' ref='input' />
+                <input className='form-control' type='text' ref='input' />
 
-                <button onClick={(e) => this.handleClick(e)}>
+                <Button bsStyle='success' bsSize='small' onClick={(e) => this.handleClick(e)}>
                     Add
-                </button>
+                </Button>
             </div >
         )
     }

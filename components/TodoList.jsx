@@ -9,7 +9,7 @@ export default class TodoList extends Component {
                     <Todo
                         key={todo.id}
                         {...todo}
-                    />
+                        />
                 )}
             </ul>
         )

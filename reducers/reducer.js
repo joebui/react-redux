@@ -5,10 +5,10 @@ function todo(state, action) {
     switch (action.type) {
 
         case ADD_TODO:
-            return {
+            return [{
                 id: action.id,
                 text: action.text,
-            }
+            }]
 
         default:
             return state;
@@ -19,10 +19,7 @@ function todos(state = [], action) {
     switch (action.type) {
 
         case ADD_TODO:
-            return [
-                ...state,
-                todo(undefined, action)
-            ]
+            return state.concat(todo(undefined, action));
 
         default:
             return state;

@@ -1,5 +1,5 @@
 var config = {
-    entry: './main.js',
+    entry: './main.jsx',
 
     output: {
         path: '/dist',
