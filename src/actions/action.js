@@ -1,4 +1,4 @@
-export const ADD_TODO = 'ADD_TODO';
+import ADD_TODO from './actionTypes';
 
 let nextTodoId = 0;
 
