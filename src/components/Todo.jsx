@@ -4,7 +4,7 @@ export default class Todo extends Component {
     render() {
         return (
             <li>
-                {this.props.patientName}
+                {this.props.text}
             </li>
         )
     }
