@@ -1,8 +1,8 @@
-import ADD_TODO from './actionTypes';
+import { ADD_TODO } from './actionTypes'
 
 let nextTodoId = 0;
 
-export function addTodo(text) {
+export function addTodo(text) {    
     return {
         type: ADD_TODO,
         id: nextTodoId++,

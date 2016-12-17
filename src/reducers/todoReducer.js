@@ -1,4 +1,4 @@
-import ADD_TODO from '../actions/actionTypes';
+import { ADD_TODO } from '../actions/actionTypes';
 
 function todo(state, action) {
     switch (action.type) {
@@ -15,7 +15,6 @@ function todo(state, action) {
 }
 
 export default function todos(state = [], action) {
-    console.log(action.type);
     switch (action.type) {
 
         case ADD_TODO:
