@@ -4,6 +4,7 @@ import { addTodo } from './actions/action'
 
 import AddTodo from './components/AddTodo.jsx'
 import TodoList from './components/TodoList.jsx'
+import Header from './components/Header.jsx';
 
 class App extends Component {
     render() {
@@ -11,11 +12,15 @@ class App extends Component {
 
         return (
             <div>
-                <AddTodo
-                    onAddClick={text => dispatch(addTodo(text))}
-                    />
+                <Header />
 
-                <TodoList todos={visibleTodos} />
+                <div className="container">
+                    <AddTodo
+                        onAddClick={text => dispatch(addTodo(text))}
+                        />
+
+                    <TodoList todos={visibleTodos} />
+                </div>
             </div>
         )
     }
