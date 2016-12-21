@@ -4,12 +4,15 @@ import { Button } from 'react-bootstrap';
 export default class AddTodo extends Component {
     render() {
         return (
-            <div>
-                <input className='form-control' type='text' ref='input' />
-
-                <Button bsStyle='success' bsSize='small' onClick={(e) => this.handleClick(e)}>
-                    Add
-                </Button>
+            <div className='row'>
+                <div className='col-md-4'>
+                    <input className='form-control' type='text' ref='input' />
+                </div>
+                <div className='col-md-1'>
+                    <Button bsStyle='success' onClick={(e) => this.handleClick(e)}>
+                        Add
+                    </Button>
+                </div>
             </div >
         )
     }

@@ -1,5 +1,7 @@
 var config = {
-    entry: './src/main.jsx',
+    entry: {
+        js: ['babel-polyfill', './src/index.js']        
+    },
 
     output: {
         path: '/dist',

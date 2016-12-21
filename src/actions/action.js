@@ -1,11 +1,44 @@
-import { ADD_TODO } from './actionTypes'
+import * as todoService from '../services/todoService';
+import * as types from './actionTypes'
 
-let nextTodoId = 0;
+function requestData() {
+    return { type: types.REQ_TODOS }
+};
 
-export function addTodo(text) {    
+function receiveData(json) {
     return {
-        type: ADD_TODO,
-        id: nextTodoId++,
+        type: types.GET_TODOS,
+        data: json.data,
+        status: json.status
+    }
+};
+
+function receiveError(json) {
+    return {
+        type: types.GET_TODOS_ERROR,
+        data: json.data,
+        status: json.status
+    }
+};
+
+export function addTodo(id, text) {
+    return {
+        type: types.ADD_TODO,
+        id: id,
         text
-    };
+    }
+}
+
+export function getTodos() {
+    return function (dispatch) {
+        dispatch(requestData());
+
+        return todoService.getAllTodoItems()
+            .then(function (res) {                
+                dispatch(receiveData(res));
+            })
+            .catch(function (err) {
+                dispatch(receiveError(err));
+            });
+    }
 }
