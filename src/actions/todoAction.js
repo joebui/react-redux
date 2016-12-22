@@ -3,23 +3,23 @@ import * as types from './actionTypes'
 
 function requestData() {
     return { type: types.REQ_TODOS }
-};
+}
 
 function receiveData(json) {
     return {
-        type: types.GET_TODOS,
+        type: types.GET_TODOS_SUCCESS,
         data: json.data,
         status: json.status
     }
-};
+}
 
 function receiveError(json) {
     return {
         type: types.GET_TODOS_ERROR,
-        data: json.data,
+        data: [],
         status: json.status
     }
-};
+}
 
 export function addTodo(id, text) {
     return {
@@ -30,14 +30,14 @@ export function addTodo(id, text) {
 }
 
 export function getTodos() {
-    return function (dispatch) {
+    return (dispatch) => {
         dispatch(requestData());
 
         return todoService.getAllTodoItems()
-            .then(function (res) {                
+            .then((res) => {
                 dispatch(receiveData(res));
             })
-            .catch(function (err) {
+            .catch((err) => {
                 dispatch(receiveError(err));
             });
     }

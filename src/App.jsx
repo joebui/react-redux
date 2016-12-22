@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addTodo, getTodos, setNextTodoId } from './actions/action'
+import { addTodo, getTodos } from './actions/todoAction'
 
 import AddTodo from './components/AddTodo.jsx'
 import TodoList from './components/TodoList.jsx'
@@ -13,16 +13,16 @@ class App extends Component {
     }
 
     render() {
-        const { dispatch, todos, nextId } = this.props
+        const { dispatch, todos } = this.props
 
         return (
             <div>
                 <Header />
 
                 <div className="container">
-                    <AddTodo onAddClick={text => dispatch(addTodo(nextId, text))} />
+                    <AddTodo onAddClick={text => dispatch(addTodo(todos.nextId, text))} />
 
-                    <TodoList todos={todos} />
+                    <TodoList todos={todos.data} />
                 </div>
             </div>
         )
@@ -31,8 +31,7 @@ class App extends Component {
 
 function select(state) {
     return {
-        todos: state.todos.data,
-        nextId: state.todos.nextId
+        todos: state.todos
     }
 }
 
