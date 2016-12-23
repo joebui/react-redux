@@ -20,4 +20,4 @@ $ npm run rest
 $ npm start
 ```
 
--  Go to your browser and enter the address: http://localhost:8000/ 
+-  Go to your browser and go to this [link](http://localhost:8000/)
