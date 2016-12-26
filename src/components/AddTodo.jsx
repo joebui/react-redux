@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Button } from 'react-bootstrap';
 
-export default class AddTodo extends Component {
+class AddTodo extends Component {
     handleClick() {
         const node = this.refs.input
         const text = node.value.trim()
@@ -24,3 +24,9 @@ export default class AddTodo extends Component {
         )
     }    
 }
+
+AddTodo.propTypes = {
+    onAddClick: React.PropTypes.func
+}
+
+export default AddTodo
