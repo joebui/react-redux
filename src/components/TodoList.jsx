@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Todo from './Todo.jsx'
 
-export default class TodoList extends Component {
+class TodoList extends Component {
     render() {
         return (
             <ul>
@@ -17,3 +17,9 @@ export default class TodoList extends Component {
         )
     }
 }
+
+TodoList.propTypes = {
+    todos: React.PropTypes.array.isRequired
+}
+
+export default TodoList

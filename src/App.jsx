@@ -4,7 +4,7 @@ import { addTodo, getTodos } from './actions/todoAction'
 
 import AddTodo from './components/AddTodo.jsx'
 import TodoList from './components/TodoList.jsx'
-import Header from './components/Header.jsx';
+import Header from './components/Header.jsx'
 
 class App extends Component {
     componentWillMount() {
@@ -27,6 +27,10 @@ class App extends Component {
             </div>
         )
     }
+}
+
+App.propTypes = {
+    todos: React.PropTypes.object.isRequired
 }
 
 function select(state) {
