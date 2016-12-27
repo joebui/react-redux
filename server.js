@@ -8,7 +8,7 @@ var config = require('./webpack.config.js');
 const app = express();
 const compiler = webpack(config);
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 8000));
 app.use(express.static(__dirname + '/dist'));
 app.use(webpackMiddleware(compiler, {
     stats: {
