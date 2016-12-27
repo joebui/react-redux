@@ -1,7 +1,7 @@
 import { compose, createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk';
 
-import todoApp from '../reducers/reducer'
+import todoApp from '../reducers'
 
 const createAppStore = compose(
 	applyMiddleware(thunkMiddleware)

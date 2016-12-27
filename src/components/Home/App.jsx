@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addTodo, getTodos } from './actions/todoAction'
+import { addTodo, getTodos } from '../../actions/todoAction'
 
-import AddTodo from './components/AddTodo.jsx'
-import TodoList from './components/TodoList.jsx'
-import Header from './components/Header.jsx'
+import AddTodo from './AddTodo.jsx'
+import TodoList from './TodoList.jsx'
+import Header from '../../components/Shared/Header.jsx'
 
 class App extends Component {
     componentWillMount() {
@@ -21,7 +21,7 @@ class App extends Component {
 
                 <div className="container">
                     <AddTodo onAddClick={text => dispatch(addTodo(todos.nextId, text))} />
-
+                    <br/>
                     <TodoList todos={todos.data} />
                 </div>
             </div>

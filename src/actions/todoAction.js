@@ -5,19 +5,19 @@ function requestData() {
     return { type: types.REQ_TODOS }
 }
 
-function receiveData(json) {
+function receiveData(value) {
     return {
         type: types.GET_TODOS_SUCCESS,
-        data: json.data,
-        status: json.status
+        data: value.data,
+        status: value.status
     }
 }
 
-function receiveError(json) {
+function receiveError(value) {
     return {
         type: types.GET_TODOS_ERROR,
         data: [],
-        status: json.status
+        status: value.status
     }
 }
 

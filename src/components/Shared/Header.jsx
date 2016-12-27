@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Header extends Component {
     render() {
@@ -12,9 +13,15 @@ export default class Header extends Component {
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
-                            </button>
-                            <a className="navbar-brand" href="#">React flux sample</a>
-                        </div>                        
+                            </button>                            
+                            <Link className='navbar-brand' to={'/'}>React flux sample</Link>
+                        </div>
+                        <div id="navbar" className="collapse navbar-collapse">
+                            <ul className="nav navbar-nav">
+                                <li><Link to={'/about'}>About</Link></li>
+                                <li><Link to={'/contact'}>Contact</Link></li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>

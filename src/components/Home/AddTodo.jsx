@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { Button } from 'react-bootstrap';
 
 class AddTodo extends Component {
