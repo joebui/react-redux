@@ -8,6 +8,7 @@ var config = require('./webpack.config.js');
 const app = express();
 const compiler = webpack(config);
 
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/dist'));
 app.use(webpackMiddleware(compiler, {
     stats: {
@@ -20,6 +21,6 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-app.listen(8000, '0.0.0.0', function () {
-    console.log('Listening on port 8000');
+app.listen(app.get('port'), '0.0.0.0', function () {
+    console.log('Listening on port ' + app.get('port'));
 });  
