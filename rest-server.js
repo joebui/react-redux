@@ -6,6 +6,7 @@ var compression = require('compression');
 
 var app = express();
 
+app.set('port', (process.env.PORT || 3000));
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -67,6 +68,6 @@ app.use(function (err, req, res, next) {
 });
 
 
-app.listen(3000, '0.0.0.0', function () {
-    console.log('Listening on port 3000');
+app.listen(app.get('port'), '0.0.0.0', function () {
+    console.log('Listening on port ' + app.get('port'));
 });
