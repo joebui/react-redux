@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "rest": "node rest-server.js"
+    "start": "node server.js"    
   },
   "author": "",
   "license": "ISC",
@@ -15,13 +14,10 @@
     "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1",
-    "body-parser": "^1.15.2",
-    "compression": "^1.6.2",
-    "cookie-parser": "^1.4.3",
+    "babel-preset-react": "^6.11.1",    
+    "compression": "^1.6.2",    
     "express": "^4.14.0",
-    "morgan": "^1.7.0",
-    "path": "^0.12.7",
+    "morgan": "^1.7.0",    
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.3.1",

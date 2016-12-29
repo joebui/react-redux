@@ -2,22 +2,30 @@
 
 ## How to setup and run the project
 
--   Install packages
+-   Go to REST and SPA folders to install packages for each
 
 ```
 $ npm i
 ```
 
--   Run the server
+-   Direct to REST folder to run the RESTful web service
 
 ```
 $ npm run rest
 ```
 
--   Run the React app
+-   Direct to SPA folder to run the React app
 
 ```
 $ npm start
 ```
 
 -  Go to this [link](http://localhost:8000/)
+
+## Dockerize the project
+
+I have included 2 Dockerfile files in REST and SPA folder so that you can build images and run containers for both. Or you can 
+pull the images I created from Docker Hub by following these links
+
+-   [https://hub.docker.com/r/dienbui/rflux-rest/](https://hub.docker.com/r/dienbui/rflux-rest/)
+-   [https://hub.docker.com/r/dienbui/rflux-spa/](https://hub.docker.com/r/dienbui/rflux-spa/)
