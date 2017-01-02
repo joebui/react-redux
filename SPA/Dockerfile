@@ -11,6 +11,7 @@ RUN npm install pm2 -g
 
 # Bundle source code
 COPY . /usr/src/app
+RUN npm run build
 
 EXPOSE 8000
-CMD ["pm2", "start", "server.js", "--no-daemon"]
+CMD ["pm2", "start", "prod-server.js", "--no-daemon"]
