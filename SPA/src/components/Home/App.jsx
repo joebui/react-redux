@@ -5,6 +5,7 @@ import { addTodo, getTodos } from '../../actions/todoAction'
 import AddTodo from './AddTodo.jsx'
 import TodoList from './TodoList.jsx'
 import Header from '../../components/Shared/Header.jsx'
+import Footer from '../../components/Shared/Footer.jsx';
 
 class App extends Component {
     componentWillMount() {
@@ -21,9 +22,11 @@ class App extends Component {
 
                 <div className="container">
                     <AddTodo onAddClick={text => dispatch(addTodo(todos.nextId, text))} />
-                    <br/>
+                    <br />
                     <TodoList todos={todos.data} />
                 </div>
+
+                <Footer />
             </div>
         )
     }
