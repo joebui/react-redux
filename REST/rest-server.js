@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 });
 app.disable('x-powered-by');
 
-app.get('/api/patients', function (req, res) {
+app.get('/api/todos', function (req, res) {
     res.status(200).json(
         [
             {
