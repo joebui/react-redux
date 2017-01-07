@@ -1,7 +1,7 @@
 var webpack = require("webpack");
 
 var config = {
-    entry: './src/index.js',
+    entry: './src/index.jsx',
 
     output: {
         path: './dist',
