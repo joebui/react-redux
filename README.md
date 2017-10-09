@@ -21,11 +21,3 @@ $ npm start
 ```
 
 -  Go to this [link](http://localhost:8000/)
-
-## Dockerize the project (production mode)
-
-I have included 2 Dockerfile files in REST and SPA folder so that you can build images and run containers for both. Or you can 
-pull the images I created from Docker Hub by following these links
-
--   [https://hub.docker.com/r/dienbui/rflux-rest/](https://hub.docker.com/r/dienbui/rflux-rest/)
--   [https://hub.docker.com/r/dienbui/rflux-spa/](https://hub.docker.com/r/dienbui/rflux-spa/)
