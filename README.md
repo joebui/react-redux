@@ -20,4 +20,4 @@ $ npm start
 $ npm start
 ```
 
--  Go to this [link](http://localhost:8000/)
+-  Go to this [http://localhost:8000/](http://localhost:8000/)
